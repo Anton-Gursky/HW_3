@@ -16,13 +16,13 @@ import java.sql.Statement;
 public class SecondServlet extends HttpServlet {
 
     public static MySQLDriverManager driverManager = MySQLDriverManager.getInstance();
-    Connection connection = null;
-    Statement statement = null;
-    ResultSet resultSet = null;
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
+        Connection connection = null;
+        Statement statement = null;
+        ResultSet resultSet = null;
         PrintWriter writer = resp.getWriter();
 
         try {
